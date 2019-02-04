@@ -1,0 +1,32 @@
+import random
+import time
+word = 'бутылки'
+
+for beer_num in range (99, 0, -1):
+	
+
+	print (beer_num, word, 'пива на стене,')
+
+	print (beer_num, word, 'пива.')
+
+	print ('Взял одну.')
+
+	print ('Продал одну')
+	
+	if beer_num == 1:
+
+		print('Нет больше бутылок пива на стене.')
+	else: 
+		new_num = beer_num - 1
+		
+		if new_num >= 11 and new_num <= 19:
+			word = 'бутылок'
+		else:
+			if new_num % 10 == 1:
+				word = 'бутылока'
+			elif new_num % 10 in (2, 3, 4):
+				word = 'бутылоки'
+			else:
+				word = 'бутылок'
+		print(new_num, word, 'пива на стене.')
+	print()
